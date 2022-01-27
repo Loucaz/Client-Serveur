@@ -1,0 +1,52 @@
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.exe
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\images\taureau.png
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.deps.json
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.runtimeconfig.json
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.runtimeconfig.dev.json
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.dll
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\ref\WpfApp1.dll
+D:\Ecole\Git\ClientServeur\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.pdb
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\View\Window1.g.cs
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\App.g.cs
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_Content.g.cs
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_MarkupCompile.cache
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_MarkupCompile.lref
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\View\Window1.baml
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.g.resources
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.AssemblyInfoInputs.cache
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.AssemblyInfo.cs
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.dll
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\ref\WpfApp1.dll
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.pdb
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.genruntimeconfig.cache
+D:\Ecole\Git\ClientServeur\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.csproj.AssemblyReference.cache
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.exe
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\images\taureau.png
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.deps.json
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.runtimeconfig.json
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.runtimeconfig.dev.json
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.dll
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\ref\WpfApp1.dll
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\bin\Debug\net5.0-windows\WpfApp1.pdb
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\View\Window1.g.cs
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\App.g.cs
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_Content.g.cs
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_MarkupCompile.cache
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1_MarkupCompile.lref
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\View\Window1.baml
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.g.resources
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.AssemblyInfoInputs.cache
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.AssemblyInfo.cs
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.dll
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\ref\WpfApp1.dll
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.pdb
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.genruntimeconfig.cache
+D:\Ecole\Git\Client Serveur\Client\WpfApp1\obj\Debug\net5.0-windows\WpfApp1.csproj.AssemblyReference.cache

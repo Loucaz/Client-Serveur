@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="component\**" />
+    <EmbeddedResource Remove="component\**" />
+    <None Remove="component\**" />
+    <Page Remove="component\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="images\taureau.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\taureau.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

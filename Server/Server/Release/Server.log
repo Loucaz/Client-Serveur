@@ -1,0 +1,20 @@
+﻿  Client.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur
+  EndPoint.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur
+  Game.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur
+D:\Ecole\Git\Server_6_Game\Server\Game.cpp(55,42): warning C4293: '<<' : compteur de décalage négatif ou trop important, comportement non défini
+D:\Ecole\Git\Server_6_Game\Server\Game.cpp(56,39): warning C4244: 'return' : conversion de '__int64' en 'int', perte possible de données
+  Ouput.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur
+  StoppableServer.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur
+  ThreadedSocket.cpp
+D:\Ecole\Git\Server_6_Game\Server\Output.h(32,27): error C7518: les expressions fold nécessitent au moins '/std:c++17'
+D:\Ecole\Git\Server_6_Game\Server\Output.h(17,32): message : Le diagnostic s'est produit dans la fonction 'void Output::print(T...)' générée par le compilateur

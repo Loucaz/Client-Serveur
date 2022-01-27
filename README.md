@@ -4,9 +4,9 @@
 
 ### Infos
 
-Sous Windows
-Client: c# WPF MVVM
-Server: c++
+- Sous Windows
+- Client: c# WPF MVVM
+- Server: c++
 
 ### Utilisation
 
@@ -21,7 +21,7 @@ Normalement il y a pas d'argument a changer si vous lancer bien en localhost
 ## Régles implémentées du 6 qui prend
 
 Joueur possible de 1 a 10
-Le serveur supporte qu'une partie a la fois , si un joueur quitte la partie continue sans lui.
+Le serveur supporte qu'une partie a la fois , si un joueur quitte, la partie continue sans lui.
 Une fois que le premier joueur ai rejoins la partie, le serveur lance un timer de 20sec avant de commencer.
 
 - Le joueur peux envoyer une carte.

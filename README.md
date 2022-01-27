@@ -34,3 +34,7 @@ Une fois que le premier joueur ait rejoint la partie, le serveur lance un timer 
 ## Auteurs
 Julien Cottier et Cédric.V
 
+En espérant gagner "le jeu de société physique" malgré le fait que nous n'avions pas du coup priorisé le côté design du jeu XD
+
+## Image Demo:
+![alt text](https://github.com/Loucaz/Client-Serveur/tree/main/Client/WpfApp1/images/demo.png?raw=true)

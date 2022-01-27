@@ -1,1 +1,4 @@
-﻿  Server.vcxproj -> D:\Ecole\Git\Client Serveur\Server\Debug\Server.exe
+﻿  Game.cpp
+D:\Ecole\Git\Client Serveur\Server\Server\Game.cpp(55,42): warning C4293: '<<' : compteur de décalage négatif ou trop important, comportement non défini
+D:\Ecole\Git\Client Serveur\Server\Server\Game.cpp(56,39): warning C4244: 'return' : conversion de '__int64' en 'int', perte possible de données
+  Server.vcxproj -> D:\Ecole\Git\Client Serveur\Server\Debug\Server.exe

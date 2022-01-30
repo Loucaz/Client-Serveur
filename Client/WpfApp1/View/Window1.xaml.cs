@@ -46,14 +46,14 @@ namespace WpfApp1.View
             Card carte = (Card)(sender as ListBox).SelectedItem;
             if (carte == null)
                 return;
-            Board.text = "PLAY:" + carte.Num;
+            Board.Text = "PLAY:" + carte.Num;
         }
         private void SlectLine(object sender, SelectionChangedEventArgs e)
         {
             int line = (sender as ListBox).SelectedIndex;
             if (line == null)
                 return;
-            Board.text = "LINE:" + line;
+            Board.Text = "LINE:" + line;
         }
         //
     }

@@ -17,7 +17,7 @@ namespace WpfApp1.ViewModel
         private static bool isReceivingData = false;
         private static string receivedData = null;
 
-        public async Task MainConnexion()
+        public static void MainConnexion()
         {
             string[] args = Environment.GetCommandLineArgs();
             // Lecture des paramètres en cours
@@ -33,64 +33,12 @@ namespace WpfApp1.ViewModel
 
             OpenConnection(args[1], port);
             if (socket == null)
-                return;
-            Console.WriteLine("Connection to server opened successfully !");
-            return;
-            string command;
-
-            /*
-            while (true)
             {
-                Console.WriteLine("");
-                Console.Write(args[1] + "> ");
-                command = "DATE";
-
-                // Traitement de la chaîne lue
-                if (string.IsNullOrEmpty(command))
-                    continue;
-                else if (command == "EXIT")
-                    break;
-
-                // Envoi de la commande au serveur
-                Console.Write("Sending command to server in progress...");
-                if (!await BeginSendAsync(command))
-                    continue;
-                // Attente de la fin de l'envoi
-                while (isSendingData)
-                {
-                    Console.Write(".");
-                    Thread.Sleep(500);
-                }
-                Console.WriteLine("");
-                Console.WriteLine("Command sent to server successfully.");
-
-                // Lecture de la réponse du serveur
-                Console.Write("Reading server response in progress...");
-                if (!await BeginReceiveAsync())
-                    continue;
-                // Attente de la fin de la réception
-                while (isReceivingData)
-                {
-                    Console.Write(".");
-                    Thread.Sleep(500);
-                }
-                Console.WriteLine("");
-
-                // Traitement du résultat lu sur la socket
-                if (receivedData == "CONNECTION_CLOSED")
-                {
-                    Console.WriteLine("Server has closed connection !");
-                    break;
-                }
-                else
-                {
-                    // Affichage du message
-                    Console.WriteLine("Server response : " + receivedData);
-                }
+                return;
             }
 
-            CloseConnection();
-            */
+            Console.WriteLine("Connection to server opened successfully !");
+            return;
         }
 
         private static string GetAddress(string serverAddress)

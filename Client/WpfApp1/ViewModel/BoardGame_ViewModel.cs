@@ -14,6 +14,7 @@ namespace WpfApp1.ViewModel
 {
     public class BoardGame_ViewModel : INotifyPropertyChanged
     {
+        private readonly Connexion connexion = new();
 
         #region Button
         private bool canClose;
@@ -32,8 +33,8 @@ namespace WpfApp1.ViewModel
 
             TextServer = "Attente du serveur....";
             //CanClose = false;
-            _ = await connexion.setMessageAsync(text);
-            text = "Client->" + text;
+            _ = await connexion.setMessageAsync(Text);
+            Text = "Client->" + Text;
         }
 
 
@@ -59,6 +60,8 @@ namespace WpfApp1.ViewModel
             _ = ClickCommandAsync();
         }
         #endregion
+
+        #region Board
         private List<Cards> board;
         public List<Cards> Board
         {
@@ -70,82 +73,6 @@ namespace WpfApp1.ViewModel
             }
         }
 
-        private List<Card> hand;
-        public List<Card> Hand
-        {
-            get { return hand; }
-            set
-            {
-                hand = value;
-                OnPropertyChanged();
-            }
-        }
-
-        Connexion connexion = new Connexion();
-
-        private List<string> messageServ;
-
-        public List<string> MessageServ
-        {
-            get { return messageServ; }
-            set
-            {
-                messageServ = value;
-                OnPropertyChanged();
-            }
-        }
-        public string namePlayer
-        {
-            get;
-            set;
-        }
-        private string textServer;
-
-        public string TextServer
-        {
-            get { return textServer; }
-            set
-            {
-                textServer = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string score;
-
-        public string Score
-        {
-            get { return score; }
-            set
-            {
-                score = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private string Text;
-        public string text
-        {
-            get { return Text; }
-            set
-            {
-
-                MessageServ = new List<string>
-                {
-                    MessageServ[1],
-                    MessageServ[2],
-                    MessageServ[3],
-                    MessageServ[4],
-                    value
-                };
-                Text = value;
-                OnPropertyChanged();
-
-            }
-        }
-
-
         public BoardGame_ViewModel(string nameP)
         {
             Score = "0";
@@ -155,13 +82,14 @@ namespace WpfApp1.ViewModel
             {
                 "...",
                 "...",
-                "En attente du serv",
+                "En attente du serveur",
                 "Il arrive promis",
                 "..."
             };
             namePlayer = nameP;
-            text = "JOIN:" + namePlayer;
-            _ = connexion.MainConnexion();
+            Text = "JOIN:" + namePlayer;
+
+            Connexion.MainConnexion();
 
             _ = ClickCommandAsync();
 
@@ -190,35 +118,201 @@ namespace WpfApp1.ViewModel
                         newHand.Add(c);
                     }
                 }
-
                 cards.Index = y;
                 newBoard.Add(cards);
 
                 Board = newBoard;
                 Hand = newHand;
             }
-
         }
 
+        //Met a jour le board
+        private void UpdateBoard(string message)
+        {
+            string[] stringLine = message.Split(';');
 
+            List<Cards> newBoard = new();
+
+            int index = 0;
+            foreach (string line in stringLine)
+            {
+                index++;
+                if (string.IsNullOrEmpty(line))
+                    continue;
+                Cards cards = new();
+                string[] stringLineCards = line.Split(',');
+                foreach (string num in stringLineCards)
+                {
+                    if (string.IsNullOrEmpty(num))
+                    {
+                        continue;
+                    }
+                    cards.Line.Add(new Card()
+                    {
+                        Num = int.Parse(num),
+                        Malus = Cards.getPoints(int.Parse(num))
+                    });
+                }
+                cards.Index = index;
+                newBoard.Add(cards);
+            }
+            Board = newBoard;
+        }
+        #endregion
+
+        #region Hand
+
+        private List<Card> hand;
+        public List<Card> Hand
+        {
+            get { return hand; }
+            set
+            {
+                hand = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //Met a jour la main du joueur
+        private void UpdateHand(string message)
+        {
+
+            string[] stringHand = message.Split(',');
+
+            List<Card> newHand = new();
+
+            foreach (string num in stringHand)
+            {
+                if (string.IsNullOrEmpty(num))
+                {
+                    continue;
+                }
+                newHand.Add(new Card()
+                {
+                    Num = int.Parse(num),
+                    Malus = Cards.getPoints(int.Parse(num))
+                });
+            }
+
+
+            Hand = newHand;
+        }
+        #endregion
+
+        #region Score
+        private string score;
+
+        public string Score
+        {
+            get { return score; }
+            set
+            {
+                score = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //Met a jour le Score
+        private void UpdateScore(string message)
+        {
+            Score = message;
+        }
+
+        //Message Final des scores
+        private string EndMessage(string message)
+        {
+            List<Player> list = new();
+            string[] stringLine = message.Split(';');
+            foreach (string rep in stringLine)
+            {
+                if (string.IsNullOrEmpty(rep))
+                    continue;
+                string[] p = rep.Split(',');
+                list.Add(new Player(p[0], p[1]));
+            }
+            list.Sort((x, y) => x.points.CompareTo(y.points));
+
+            string result = "";
+            for (int x = 0; x < list.Count; x++)
+            {
+                result += list[x].name + " est numero: " + (x + 1) + " avec un score de: " + list[x].points + "\n";
+            }
+            return result;
+        }
+
+        #endregion
+
+        #region Text
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        // Logs
+        private List<string> messageServ;
+
+        public List<string> MessageServ
+        {
+            get { return messageServ; }
+            set
+            {
+                messageServ = value;
+                OnPropertyChanged();
+            }
+        }
+        public string namePlayer
+        {
+            get;
+            set;
+        }
+        private string textServer;
+
+        public string TextServer
+        {
+            get { return textServer; }
+            set
+            {
+                textServer = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string text;
+        public string Text
+        {
+            get { return text; }
+            set
+            {
+                MessageServ = new List<string>
+                {
+                    MessageServ[1],
+                    MessageServ[2],
+                    MessageServ[3],
+                    MessageServ[4],
+                    value
+                };
+                text = value;
+                OnPropertyChanged();
+            }
+        }
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-
+        // Ecoute en boucle le serveur
         private async Task Boucle()
         {
             while (true)
             {
                 string reponse = await Task.Run(() => connexion.getMessageAsync());
-                text = "Server->" + reponse;
+                Text = "Server->" + reponse;
 
                 Lire(reponse);
                 _ = connexion.setMessageAsync("OK");
             }
         }
+
+        //Lit le message recu par le serveur
         private void Lire(string message)
         {
             string[] code = message.Split(':');
@@ -248,90 +342,6 @@ namespace WpfApp1.ViewModel
             }
             CanClose = true;
         }
-        private string EndMessage(string message)
-        {
-            List<Player> list = new();
-            string[] stringLine = message.Split(';');
-            foreach (string rep in stringLine)
-            {
-                if (string.IsNullOrEmpty(rep))
-                    continue;
-                string[] p = rep.Split(',');
-                list.Add(new Player(p[0], p[1]));
-            }
-            list.Sort((x, y) => x.points.CompareTo(y.points));
-
-            string result="";
-            for(int x = 0; x < list.Count; x++)
-            {
-                result += list[x].name+" est numero: "+(x+1)+" avec un score de: "+list[x].points+"\n";
-            }
-            return result;
-        }
-            private void UpdateScore(string message)
-        {
-            Score = message;
-        }
-
-        private void UpdateHand(string message)
-        {
-
-            string[] stringHand = message.Split(',');
-
-            List<Card> newHand = new();
-
-            foreach (string num in stringHand)
-            {
-                if (string.IsNullOrEmpty(num))
-                {
-                    continue;
-                }
-                newHand.Add(new Card()
-                {
-                    Num = int.Parse(num),
-                    Malus = Cards.getPoints(int.Parse(num))
-                });
-            }
-
-
-            Hand = newHand;
-        }
-        private void UpdateBoard(string message)
-        {
-            string[] stringLine = message.Split(';');
-
-            List<Cards> newBoard = new();
-
-            int index = 0;
-            foreach (string line in stringLine)
-            {
-                index++;
-                if (string.IsNullOrEmpty(line))
-                {
-                    continue;
-                }
-
-                Cards cards = new();
-                string[] stringLineCards = line.Split(',');
-                foreach (string num in stringLineCards)
-                {
-                    if (string.IsNullOrEmpty(num))
-                    {
-                        continue;
-                    }
-                    cards.Line.Add(new Card()
-                    {
-                        Num = int.Parse(num),
-                        Malus = Cards.getPoints(int.Parse(num))
-                    }); 
-                }
-                cards.Index = index;
-                newBoard.Add(cards);
-            }
-
-
-            Board = newBoard;
-        }
+        #endregion
     }
-
 }

@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:WpfApp1.ViewModel"
         xmlns:local="clr-namespace:WpfApp1.View" d:DataContext="{d:DesignInstance Type=vm:BoardGame_ViewModel}"
         mc:Ignorable="d"
-        Title="{Binding namePlayer}" Height="600" Width="1000">
+        Title="{Binding namePlayer}" Height="600" Width="1025">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -35,7 +35,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <TextBlock x:Name="text" Text="{Binding text}" />
+            <TextBlock x:Name="text" Text="{Binding Text}" />
 
             <ListBox x:Name="listHand" ItemsSource= "{Binding Hand}" SelectionChanged="SlectCard" SelectionMode="Single">
 
